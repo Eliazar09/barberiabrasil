@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // GitHub Pages static export
+  output: 'export',
+  distDir: 'dist',
+  assetPrefix: '.',
   experimental: {
     optimizePackageImports: ['framer-motion', 'gsap', 'lucide-react'],
     scrollRestoration: true,

@@ -9,10 +9,10 @@ import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/booking", label: "Booking" },
+  { href: "/", label: "Início" },
+  { href: "/services", label: "Serviços" },
+  { href: "/gallery", label: "Galeria" },
+  { href: "/booking", label: "Agendar" },
 ]
 
 export function Navbar() {
@@ -46,17 +46,20 @@ export function Navbar() {
             {/* Logo - Left */}
             <Link href="/" className="flex items-center">
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="relative w-[140px] h-[50px] p-[14px] bg-[#0a0a0a] rounded-xl border border-[#262626]"
+                whileHover={{ scale: 1.05 }}
+                className="relative w-[50px] h-[50px] rounded-full overflow-hidden border-2 border-[#c9a961] shadow-lg shadow-[#c9a961]/20"
               >
                 <Image
-                  src="/image.png"
-                  alt="The Barber Co. Sydney"
+                  src="/videos/image.png"
+                  alt="Dsbarber Shop"
                   fill
-                  className="object-contain p-[14px]"
+                  className="object-cover"
                   priority
                 />
               </motion.div>
+              <span className="ml-3 text-lg font-semibold text-[#fafafa] hidden sm:block">
+                Ds<span className="text-[#c9a961]">barber</span>
+              </span>
             </Link>
 
             {/* Desktop Navigation - Pill Style - Centered */}
@@ -103,7 +106,7 @@ export function Navbar() {
                 size="sm"
                 className="rounded-full px-6"
               >
-                Book Now
+                Agendar
               </Button>
             </Link>
 
@@ -143,7 +146,7 @@ export function Navbar() {
               ))}
               <Link href="/booking" prefetch={true} onClick={() => setIsMobileMenuOpen(false)}>
                 <Button variant="gold" size="lg" className="rounded-full px-8 mt-4">
-                  Book Now
+                  Agendar
                 </Button>
               </Link>
             </nav>

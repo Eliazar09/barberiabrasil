@@ -46,25 +46,25 @@ export function PoeticStory() {
           variants={lineVariants}
           className="font-serif text-3xl lg:text-5xl leading-relaxed text-[#fafafa] italic"
         >
-          &ldquo;Every man carries a story in his reflection.
+          &ldquo;Todo homem carrega uma história em seu reflexo.
         </motion.p>
         <motion.p
           variants={lineVariants}
           className="font-serif text-3xl lg:text-5xl leading-relaxed text-[#a3a3a3] italic mt-6"
         >
-          In the silence of the chair, transformation begins.
+          No silêncio da cadeira, a transformação começa.
         </motion.p>
         <motion.p
           variants={lineVariants}
           className="font-serif text-3xl lg:text-5xl leading-relaxed text-[#a3a3a3] italic mt-6"
         >
-          Steel meets skin, time slows,
+          O aço encontra a pele, o tempo desacelera,
         </motion.p>
         <motion.p
           variants={lineVariants}
           className="font-serif text-3xl lg:text-5xl leading-relaxed text-[#a3a3a3] italic mt-6"
         >
-          and identity is refined.
+          e a identidade é refinada.
         </motion.p>
         <motion.div
           variants={lineVariants}
@@ -72,10 +72,10 @@ export function PoeticStory() {
         >
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#c9a961] to-transparent" />
           <p className="font-serif text-xl text-[#c9a961] italic tracking-wide">
-            This is not a haircut.
+            Isto não é apenas um corte.
           </p>
           <p className="font-serif text-2xl text-[#fafafa] italic tracking-widest uppercase">
-            This is ritual.
+            Isto é ritual.
           </p>
           <div className="w-24 h-px bg-gradient-to-r from-transparent via-[#c9a961] to-transparent" />
         </motion.div>

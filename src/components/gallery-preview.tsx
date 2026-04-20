@@ -121,13 +121,13 @@ export function GalleryPreview() {
           className="header-content text-center mb-16"
         >
           <p className="text-[#c9a961] text-sm tracking-[0.3em] uppercase mb-4">
-            Portfolio
+            Portfólio
           </p>
-          <h2 className="text-4xl lg:text-5xl font-semibold text-[#fafafa] mb-6">
-            The <span className="font-serif italic text-[#c9a961]">Gallery</span>
+          <h2 className="text-4xl lg:text-5xl font-semibold text-[#fafafa]">
+            A <span className="font-serif italic text-[#c9a961]">Galeria</span>
           </h2>
-          <p className="text-[#a3a3a3] max-w-[500px] mx-auto">
-            A collection of our finest work. Each image tells a story of transformation.
+          <p className="text-[#a3a3a3] mt-4 max-w-[600px]">
+            Uma coleção curada das nossas melhores transformações
           </p>
         </div>
 
@@ -174,13 +174,8 @@ export function GalleryPreview() {
           className="cta-reveal text-center"
         >
           <Link href="/gallery">
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full px-8 border-[#262626] hover:border-[#c9a961] hover:bg-[#c9a961]/5 group"
-            >
-              View Full Gallery
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <Button variant="outline" className="mr-4 border-[#262626] text-[#fafafa] hover:bg-[#1a1a1a]">
+              Ver Tudo
             </Button>
           </Link>
         </div>

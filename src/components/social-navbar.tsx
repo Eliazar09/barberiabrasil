@@ -4,7 +4,8 @@ import { useState, useRef, useCallback } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { Instagram, Phone, MapPin } from "lucide-react"
+import { Instagram, Phone, MapPin, Facebook } from "lucide-react"
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon"
 
 interface NavItem {
   icon: React.ElementType
@@ -107,19 +108,31 @@ export function SocialNavbar() {
       icon: Instagram,
       label: "Instagram",
       external: true,
-      href: "https://www.instagram.com/thebarbercosydney/",
+      href: "https://www.instagram.com/dsbarber_rr/",
+    },
+    {
+      icon: Facebook,
+      label: "Facebook",
+      external: true,
+      href: "https://www.facebook.com/p/dsbarbershop-100063505786108/",
+    },
+    {
+      icon: WhatsAppIcon,
+      label: "WhatsApp",
+      external: true,
+      href: "https://wa.me/5595991267894",
     },
     {
       icon: Phone,
-      label: "Call",
+      label: "Ligar",
       external: true,
-      href: "tel:0292901033",
+      href: "tel:95991267894",
     },
     {
       icon: MapPin,
-      label: "Location",
+      label: "Local",
       external: true,
-      href: "https://maps.google.com/?q=Barrack+Place+Shop+2+268+Kent+Street+Sydney+NSW+2000",
+      href: "https://maps.google.com/?q=Av+dos+Bandeirantes+1509+Buritis+Boa+Vista+RR",
     },
   ]
 

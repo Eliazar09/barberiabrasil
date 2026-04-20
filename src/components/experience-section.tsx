@@ -11,26 +11,26 @@ const steps = [
   {
     icon: Wine,
     number: "01",
-    title: "Welcome Drink",
-    description: "Begin your journey with a premium whisky or craft beverage, setting the tone for what awaits.",
+    title: "Boas-vindas",
+    description: "Inicie sua jornada com uma bebida refrescante, preparando o ambiente para o que está por vir.",
   },
   {
     icon: MessageCircle,
     number: "02",
-    title: "Consultation",
-    description: "Your master barber listens, analyzes, and crafts a vision tailored to your unique features.",
+    title: "Consulta",
+    description: "Seu barbeiro ouve, analisa e cria uma visão personalizada para suas características únicas.",
   },
   {
     icon: Scissors,
     number: "03",
-    title: "Precision Cut",
-    description: "Every stroke is deliberate. Every detail is intentional. This is where art meets expertise.",
+    title: "Corte Preciso",
+    description: "Cada movimento é deliberado. Cada detalhe é intencional. É onde a arte encontra a expertise.",
   },
   {
     icon: Sparkles,
     number: "04",
-    title: "Final Styling",
-    description: "Leave not just looking different, but feeling transformed. The final touch of excellence.",
+    title: "Finalização",
+    description: "Saia não apenas com aparência diferente, mas se sentindo transformado. O toque final da excelência.",
   },
 ]
 
@@ -79,10 +79,10 @@ export function ExperienceSection() {
           className="text-center mb-16 lg:mb-24"
         >
           <p className="text-[#c9a961] text-sm tracking-[0.3em] uppercase mb-4">
-            The Experience
+            A Experiência
           </p>
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#fafafa]">
-            Your <span className="font-serif italic text-[#c9a961]">Ritual</span> Awaits
+            Seu <span className="font-serif italic text-[#c9a961]">Ritual</span> Aguarda
           </h2>
         </div>
 

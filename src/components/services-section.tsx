@@ -11,32 +11,32 @@ import { ServiceCard } from "@/components/ui/service-card"
 
 const services = [
   {
-    name: "Haircut & Finish",
-    description: "Haircut with scissors & clippers and finished off with styling.",
-    price: "$69",
+    name: "Corte & Finalização",
+    description: "Corte com tesoura e máquina, finalizado com modelagem.",
+    price: "R$ 35",
     duration: "30 min",
     image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=800&fit=crop",
   },
   {
-    name: "Wash, Haircut & Style",
-    description: "Cleansed, moisturised, cut and styled.",
-    price: "$74",
+    name: "Lavagem, Corte & Modelagem",
+    description: "Limpeza, hidratação, corte e modelagem.",
+    price: "R$ 45",
     duration: "45 min",
     image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=800&fit=crop",
     badge: "Popular",
   },
   {
-    name: "Skin Fade",
-    description: "Haircut blends to skin on back and sides.",
-    price: "$74",
+    name: "Degradê (Fade)",
+    description: "Corte com degradê na nuca e laterais.",
+    price: "R$ 40",
     duration: "45 min",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&h=800&fit=crop",
-    badge: "Trending",
+    badge: "Tendência",
   },
   {
-    name: "Beard Trim",
-    description: "Defining and shortening your beard with precision by using clippers, finished with a hot towel.",
-    price: "$41",
+    name: "Barba & Bigode",
+    description: "Definição e acabamento da barba com máquina e navalha, finalizado com toalha quente.",
+    price: "R$ 30",
     duration: "20 min",
     image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=800&fit=crop",
   },
@@ -80,10 +80,10 @@ export function ServicesSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-semibold text-[#fafafa] mb-4">
-            Our <span className="font-serif italic text-[#c9a961]">Services</span>
+            Nossos <span className="font-serif italic text-[#c9a961]">Serviços</span>
           </h2>
           <p className="text-[#a3a3a3] max-w-xl mx-auto">
-            Premium grooming services tailored for the modern gentleman
+            Serviços premium de cuidados masculinos para o homem moderno
           </p>
         </div>
 
@@ -110,12 +110,12 @@ export function ServicesSection() {
         >
           <Link href="/services">
             <Button variant="outline" className="mr-4 border-[#262626] text-[#fafafa] hover:bg-[#1a1a1a]">
-              View All Services
+              Ver Todos os Serviços
             </Button>
           </Link>
           <Link href="/booking">
             <Button variant="gold" className="premium-shadow group">
-              Book Now
+              Agendar
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>

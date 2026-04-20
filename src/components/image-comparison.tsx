@@ -81,10 +81,10 @@ export function ImageComparison() {
           className="header-content text-center mb-16"
         >
           <p className="text-[#c9a961] text-sm tracking-[0.3em] uppercase mb-4">
-            Transformation
+            Transformação
           </p>
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#fafafa]">
-            Before <span className="font-serif italic text-[#c9a961]">&</span> After
+            Antes <span className="font-serif italic text-[#c9a961]">&</span> Depois
           </h2>
         </div>
 
@@ -106,7 +106,7 @@ export function ImageComparison() {
             <div className="absolute inset-0">
               <Image
                 src={afterImage}
-                alt="After haircut"
+                alt="Depois do corte"
                 fill
                 className="object-cover"
                 sizes="(max-width: 800px) 100vw, 800px"
@@ -121,7 +121,7 @@ export function ImageComparison() {
             >
               <Image
                 src={beforeImage}
-                alt="Before haircut"
+                alt="Antes do corte"
                 fill
                 className="object-cover"
                 style={{ filter: "grayscale(30%) contrast(0.9)" }}
@@ -130,7 +130,7 @@ export function ImageComparison() {
               {/* Before label overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-6xl font-serif text-[#fafafa]/20 uppercase tracking-widest">
-                  Before
+                  Antes
                 </span>
               </div>
             </div>
@@ -151,19 +151,19 @@ export function ImageComparison() {
               className="absolute top-4 left-4 px-4 py-2 bg-[#0a0a0a]/80 backdrop-blur-sm rounded-full text-sm text-[#fafafa] font-medium"
               style={{ opacity: sliderPosition > 15 ? 1 : 0 }}
             >
-              Before
+              Antes
             </div>
             <div
               className="absolute top-4 right-4 px-4 py-2 bg-[#0a0a0a]/80 backdrop-blur-sm rounded-full text-sm text-[#c9a961] font-medium"
               style={{ opacity: sliderPosition < 85 ? 1 : 0 }}
             >
-              After
+              Depois
             </div>
           </div>
 
           {/* Instruction */}
           <p className="text-center text-[#737373] text-sm mt-6">
-            Drag to compare
+            Arraste para comparar
           </p>
         </div>
       </div>

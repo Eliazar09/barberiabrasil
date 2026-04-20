@@ -74,7 +74,7 @@ export function HeroSection() {
           playsInline
           preload="metadata"
           className="w-full h-full object-cover"
-          poster="/videos/poster.jpg"
+          poster="/videos/image.png"
         >
           <source src="/videos/7426312-uhd_2560_1080_25fps.mp4" type="video/mp4" />
         </video>
@@ -95,7 +95,7 @@ export function HeroSection() {
           <motion.div variants={itemVariants} className="max-w-[1200px] text-center mx-auto">
             <h1 className="relative inline-block text-[42px] sm:text-[64px] lg:text-[82px] font-semibold leading-[1.1] text-[#0a0a0a] tracking-tight">
               <span className="relative z-10 bg-[#c9a961] px-6 sm:px-10 py-3 sm:py-4 block">
-                Where <span className="font-serif italic tracking-wide">style</span> meets sophistication
+                Onde o <span className="font-serif italic tracking-wide">estilo</span> encontra a sofisticação
               </span>
             </h1>
           </motion.div>
@@ -105,7 +105,7 @@ export function HeroSection() {
             variants={itemVariants}
             className="text-xl text-[#a3a3a3] max-w-[600px] text-center mx-auto"
           >
-            Every detail crafted for the discerning gentleman
+            Cada detalhe é pensado para o homem exigente
           </motion.p>
 
           {/* Email CTA */}
@@ -115,7 +115,7 @@ export function HeroSection() {
           >
             <Input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Digite seu e-mail"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="h-12 rounded-full px-6 bg-[#0a0a0a]/80 border-[#262626] text-[#fafafa] placeholder:text-[#737373] focus-visible:ring-[#c9a961]"
@@ -126,7 +126,7 @@ export function HeroSection() {
                 size="lg"
                 className="h-12 rounded-full px-8 premium-shadow group"
               >
-                Book Now
+                Agendar
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
@@ -149,7 +149,7 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2 text-sm text-[#a3a3a3]">
               <Users className="w-4 h-4 text-[#c9a961]" />
-              <span>Sydney&apos;s finest barbershop experience</span>
+              <span>A melhor barbearia de Boa Vista - RR</span>
             </div>
           </motion.div>
         </motion.div>

@@ -53,7 +53,7 @@ export default function GalleryPage() {
               className="mb-8 text-[#a3a3a3] hover:text-[#fafafa]"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
+              Voltar ao Início
             </Button>
           </Link>
 
@@ -63,14 +63,14 @@ export default function GalleryPage() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
           >
             <p className="text-[#c9a961] text-sm tracking-[0.3em] uppercase mb-4">
-              Our Work
+              Nosso Trabalho
             </p>
             <h1 className="text-5xl lg:text-7xl font-semibold text-[#fafafa] mb-6">
-              The <span className="font-serif italic text-[#c9a961]">Gallery</span>
+              A <span className="font-serif italic text-[#c9a961]">Galeria</span>
             </h1>
             <p className="text-[#a3a3a3] max-w-[600px] text-lg">
-              A curated collection of our finest transformations. Each image represents
-              our commitment to excellence and the art of grooming.
+              Uma coleção curada das nossas melhores transformações. Cada imagem representa
+              nosso compromisso com a excelência e a arte da barbearia.
             </p>
           </motion.div>
         </div>
@@ -134,7 +134,7 @@ export default function GalleryPage() {
             size="lg"
             className="rounded-full px-6 bg-[#c9a961] text-[#0a0a0a] hover:bg-[#d4b978] premium-shadow shadow-lg shadow-[#c9a961]/20 group"
           >
-            Book Now
+            Agendar
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
         </Link>

@@ -13,127 +13,120 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation"
 import { SquishyCard } from "@/components/ui/squishy-card"
 import { ServiceCard } from "@/components/ui/service-card"
 import { MovingDotCard } from "@/components/ui/moving-dot-card"
-import { FlowingMenu } from "@/components/ui/flowing-menu"
 
 const hairServices = [
   {
-    name: "Haircut & Finish",
-    description: "Haircut with scissors & clippers and finished off with styling.",
-    price: "$69",
+    name: "Corte & Finalização",
+    description: "Corte com tesoura e máquina, finalizado com modelagem.",
+    price: "R$ 35",
     duration: "30 min",
     image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=800&fit=crop",
   },
   {
-    name: "Wash, Haircut & Style",
-    description: "Cleansed, moisturised, cut and styled.",
-    price: "$74",
+    name: "Lavagem, Corte & Modelagem",
+    description: "Limpeza, hidratação, corte e modelagem.",
+    price: "R$ 45",
     duration: "45 min",
     image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=800&fit=crop",
     badge: "Popular",
   },
   {
-    name: "Long Hair",
-    description: "For hair that is shoulder length or longer. Wash, cut and styled.",
-    price: "$110",
+    name: "Cabelo Longo",
+    description: "Para cabelos no ombro ou abaixo. Lavagem, corte e modelagem.",
+    price: "R$ 55",
     duration: "60 min",
     image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=800&fit=crop",
   },
   {
-    name: "Clipper Cut",
-    description: "Using electric clippers to cut your hair instead of using scissors.",
-    price: "$40",
+    name: "Corte na Máquina",
+    description: "Corte utilizando máquina elétrica.",
+    price: "R$ 25",
     duration: "20 min",
     image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=800&fit=crop",
   },
   {
     name: "Zero Fade",
-    description: "Haircut down to the minimal length leaving a slight shadow.",
-    price: "$74",
+    description: "Degradê baixo com sombra mínima.",
+    price: "R$ 40",
     duration: "45 min",
     image: "https://images.unsplash.com/photo-1633681926035-ec1ac984418a?w=600&h=800&fit=crop",
   },
   {
-    name: "Skin Fade",
-    description: "Haircut blends to skin on back and sides.",
-    price: "$74",
+    name: "Degradê (Fade)",
+    description: "Degradê na nuca e laterais.",
+    price: "R$ 40",
     duration: "45 min",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&h=800&fit=crop",
-    badge: "Trending",
+    badge: "Tendência",
   },
 ]
 
 const shaveServices = [
   {
-    name: "Hot Towel Head Shave",
-    description: "Using shaving products on your head followed by a hot towel cleanse and moisturiser leaving your head smoothed and refreshed.",
-    price: "$70",
+    name: "Barba com Toalha Quente",
+    description: "Modelagem da barba com produtos especiais, seguido de toalha quente e hidratação.",
+    price: "R$ 45",
     duration: "30 min",
     image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=800&fit=crop",
   },
   {
-    name: "Traditional Hot Face Shave",
-    description: "Ultimate shaving experience using a single razor blade finished off with moisturiser.",
-    price: "$70",
+    name: "Barba Tradicional",
+    description: "Experiência clássica de barbear com navalha e finalização com hidratante.",
+    price: "R$ 40",
     duration: "30 min",
     image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=800&fit=crop",
-    badge: "Classic",
+    badge: "Clássico",
   },
 ]
 
 const popularServices = [
   {
-    title: "Haircut & Style",
-    price: "69",
+    title: "Corte & Modelagem",
+    price: "35",
     duration: "30 min",
-    description: "Precision haircut with scissors & clippers, finished with premium styling products.",
+    description: "Corte preciso com tesoura e máquina, finalizado com produtos premium de modelagem.",
     image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=800&fit=crop",
-    badge: "Most Popular",
+    badge: "Mais Popular",
   },
   {
-    title: "Skin Fade",
-    price: "74",
+    title: "Degradê (Fade)",
+    price: "40",
     duration: "45 min",
-    description: "Expert fade that blends seamlessly to skin on back and sides with precision detailing.",
+    description: "Degradê perfeito que se funde suavemente na nuca e laterais com detalhes precisos.",
     image: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=800&fit=crop",
-    badge: "Trending",
+    badge: "Tendência",
   },
   {
-    title: "Beard Sculpting",
-    price: "52",
+    title: "Barba Premium",
+    price: "40",
     duration: "30 min",
-    description: "Complete beard transformation with straight razor finish and hot towel treatment.",
+    description: "Transformação completa da barba com navalha e tratamento de toalha quente.",
     image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=800&fit=crop",
     badge: "Premium",
   },
 ]
 
-const flowingMenuItems = [
-  { link: "#hair", text: "Haircuts", image: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&h=400&fit=crop" },
-  { link: "#shave", text: "Shaves", image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=400&fit=crop" },
-  { link: "#beard", text: "Beards", image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=400&fit=crop" },
-  { link: "#packages", text: "Packages", image: "https://images.unsplash.com/photo-1633681926035-ec1ac984418a?w=600&h=400&fit=crop" },
-]
 
 const beardServices = [
   {
-    name: "Beard Trim",
-    description: "Defining and shortening your beard with precision by using clippers, finished with a hot towel.",
-    price: "$41",
+    name: "Barba & Bigode",
+    description: "Modelagem e acabamento da barba com máquina, finalizado com toalha quente.",
+    price: "R$ 30",
     duration: "20 min",
     image: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=800&fit=crop",
   },
   {
-    name: "Bespoke Beard Trim",
-    description: "For longer beards, using clippers or scissors and razor finish on the cheeks finished with hot towel and beard product.",
-    price: "$52",
+    name: "Barba Premium",
+    description: "Para barbas maiores, com tesoura, navalha e produtos especiais.",
+    price: "R$ 40",
     duration: "30 min",
     image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&h=800&fit=crop",
     badge: "Premium",
   },
   {
-    name: "Beard Trim & Line It Up",
-    description: "Bringing out the straight razor for an even sharper line-up to compliment your beard trim.",
-    price: "$62",
+    name: "Barba com Linha",
+    description: "Acabamento perfeito com navalha para complementar seu corte.",
+    price: "R$ 45",
     duration: "35 min",
     image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=800&fit=crop",
   },
@@ -161,17 +154,17 @@ export default function ServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
           <div className="flex items-center gap-2 text-[#a3a3a3] text-xs tracking-widest mb-4">
-            <Link href="/" className="hover:text-[#fafafa] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#fafafa] transition-colors">Início</Link>
             <ChevronRight size={12} />
-            <span className="text-[#fafafa]">Services</span>
+            <span className="text-[#fafafa]">Serviços</span>
           </div>
           <AnimatedText 
-            text="Our Services" 
+            text="Nossos Serviços" 
             gradientColors="linear-gradient(90deg, #c9a961, #fff, #c9a961)"
             textClassName="text-[3rem] md:text-[5rem] font-bold"
           />
           <p className="text-[#a3a3a3] text-lg mt-4 max-w-xl">
-            Premium grooming services tailored for the modern gentleman
+            Serviços premium de cuidados masculinos para o homem moderno
           </p>
         </div>
       </div>
@@ -181,10 +174,10 @@ export default function ServicesPage() {
         titleComponent={
           <div className="mb-8">
             <h2 className="text-3xl md:text-5xl font-semibold text-[#fafafa] mb-4">
-              The <span className="font-serif italic text-[#c9a961]">Experience</span>
+              A <span className="font-serif italic text-[#c9a961]">Experiência</span>
             </h2>
             <p className="text-[#a3a3a3] max-w-md mx-auto">
-              Step into our world of premium grooming and relaxation
+              Entre no nosso mundo de cuidados premium e relaxamento
             </p>
           </div>
         }
@@ -202,9 +195,9 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-[#0a0a0a]/60 flex items-center justify-center">
             <div className="text-center">
               <h3 className="text-2xl md:text-4xl font-semibold text-[#fafafa] mb-2">
-                Where <span className="font-serif italic text-[#c9a961]">style</span> meets sophistication
+                Onde o <span className="font-serif italic text-[#c9a961]">estilo</span> encontra a sofisticação
               </h3>
-              <p className="text-[#a3a3a3]">Every detail crafted for the discerning gentleman</p>
+              <p className="text-[#a3a3a3]">Cada detalhe é pensado para o homem exigente</p>
             </div>
           </div>
         </div>
@@ -220,10 +213,10 @@ export default function ServicesPage() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-[#fafafa] mb-4">
-            Most <span className="font-serif italic text-[#c9a961]">Popular</span> Services
+            Serviços <span className="font-serif italic text-[#c9a961]">Mais</span> Populares
           </h2>
           <p className="text-[#a3a3a3] max-w-xl mx-auto">
-            Our signature services loved by Sydney&apos;s discerning gentlemen
+            Nossos serviços exclusivos amados pelos clientes de Boa Vista
           </p>
         </motion.div>
 
@@ -242,27 +235,12 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Flowing Menu Navigation */}
-      <section className="py-12 px-4 md:px-12 max-w-7xl mx-auto">
-        <div className="h-[300px] md:h-[350px] rounded-2xl overflow-hidden">
-          <FlowingMenu
-            items={flowingMenuItems}
-            speed={12}
-            textColor="#a3a3a3"
-            bgColor="#0a0a0a"
-            marqueeBgColor="#c9a961"
-            marqueeTextColor="#0a0a0a"
-            borderColor="#262626"
-          />
-        </div>
-      </section>
-
       {/* Stats Section - Moving Dot Card */}
       <section className="py-20 px-4 md:px-12 max-w-7xl mx-auto">
         <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-          <MovingDotCard target={15000} duration={2500} label="Happy Clients" />
-          <MovingDotCard target={25} duration={2000} label="Years Experience" />
-          <MovingDotCard target={50} duration={2000} label="Expert Barbers" />
+          <MovingDotCard target={135} duration={2500} label="Clientes Satisfeitos" />
+          <MovingDotCard target={5} duration={2000} label="Anos de Experiência" />
+          <MovingDotCard target={6} duration={2000} label="Barbeiros Especialistas" />
         </div>
       </section>
 
@@ -276,10 +254,10 @@ export default function ServicesPage() {
           className="mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-[#fafafa] mb-4">
-            <span className="font-serif italic text-[#c9a961]">Hair</span> Services
+            Serviços de <span className="font-serif italic text-[#c9a961]">Cabelo</span>
           </h2>
           <p className="text-[#a3a3a3] max-w-xl">
-            Precision cuts tailored to your individual style and preferences
+            Cortes precisos adaptados ao seu estilo e preferências individuais
           </p>
         </motion.div>
 
@@ -315,10 +293,10 @@ export default function ServicesPage() {
           className="mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-[#fafafa] mb-4">
-            <span className="font-serif italic text-[#c9a961]">Shaves</span>
+            <span className="font-serif italic text-[#c9a961]">Barbas</span>
           </h2>
           <p className="text-[#a3a3a3] max-w-xl">
-            Traditional hot towel shaves for the ultimate grooming experience
+            Barbear tradicional com toalha quente para a melhor experiência
           </p>
         </motion.div>
 
@@ -354,10 +332,10 @@ export default function ServicesPage() {
           className="mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-semibold text-[#fafafa] mb-4">
-            <span className="font-serif italic text-[#c9a961]">Beards</span>
+            <span className="font-serif italic text-[#c9a961]">Modelagem</span>
           </h2>
           <p className="text-[#a3a3a3] max-w-xl">
-            Expert beard grooming and sculpting for the perfect look
+            Cuidado e modelagem especializada da barba para o visual perfeito
           </p>
         </motion.div>
 
@@ -393,20 +371,24 @@ export default function ServicesPage() {
           className="bg-[#141414] border border-[#262626] rounded-2xl p-8 md:p-12 text-center"
         >
           <h2 className="text-2xl md:text-3xl font-semibold text-[#fafafa] mb-8">
-            Opening <span className="font-serif italic text-[#c9a961]">Hours</span>
+            Horário de <span className="font-serif italic text-[#c9a961]">Funcionamento</span>
           </h2>
           <div className="space-y-4 max-w-sm mx-auto">
             <div className="flex justify-between py-3 border-b border-[#262626]">
-              <span className="text-[#a3a3a3]">Monday - Friday</span>
-              <span className="text-[#fafafa] font-medium">8am - 8pm</span>
+              <span className="text-[#a3a3a3]">Segunda - Sexta</span>
+              <span className="text-[#fafafa] font-medium">9h - 19h</span>
             </div>
             <div className="flex justify-between py-3 border-b border-[#262626]">
-              <span className="text-[#a3a3a3]">Saturday</span>
-              <span className="text-[#fafafa] font-medium">8am - 5pm</span>
+              <span className="text-[#a3a3a3]">Sábado</span>
+              <span className="text-[#fafafa] font-medium">9h - 17h</span>
             </div>
             <div className="flex justify-between py-3">
-              <span className="text-[#a3a3a3]">Sunday</span>
-              <span className="text-[#ef4444] font-medium">Closed</span>
+              <span className="text-[#a3a3a3]">Domingo</span>
+              <span className="text-[#ef4444] font-medium">Fechado</span>
+            </div>
+            <div className="flex justify-between py-3 border-t border-[#262626] mt-2 pt-2">
+              <span className="text-[#c9a961] font-medium">Promo Terça</span>
+              <span className="text-[#c9a961] font-medium">Pagamento à vista</span>
             </div>
           </div>
         </motion.div>
@@ -422,14 +404,14 @@ export default function ServicesPage() {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-3xl md:text-5xl font-semibold text-[#fafafa] mb-6">
-            Ready to look your <span className="font-serif italic text-[#c9a961]">best</span>?
+            Pronto para ficar no seu <span className="font-serif italic text-[#c9a961]">melhor</span>?
           </h2>
           <p className="text-[#a3a3a3] text-lg mb-8 max-w-xl mx-auto">
-            Book your appointment today and experience Sydney&apos;s finest barbershop
+            Agende seu horário hoje e experimente a melhor barbearia de Boa Vista
           </p>
           <Link href="/booking">
             <Button variant="gold" size="lg" className="h-14 px-10 rounded-full text-lg">
-              Book Now
+              Agendar
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>

@@ -86,15 +86,15 @@ export function FinalCTA() {
 
           {/* Headline */}
           <h2 className="text-5xl lg:text-7xl font-semibold text-[#fafafa] leading-tight">
-            Your image is
+            Sua imagem é
             <br />
-            your <span className="font-serif italic text-[#c9a961]">signature</span>.
+            sua <span className="font-serif italic text-[#c9a961]">assinatura</span>.
           </h2>
 
           {/* Subtext */}
           <p className="text-lg text-[#a3a3a3] max-w-[500px]">
-            Step into an experience designed for those who demand excellence. 
-            Your transformation begins with a single appointment.
+            Entre em uma experiência projetada para quem exige excelência.
+            Sua transformação começa com um simples agendamento.
           </p>
 
           {/* CTA */}
@@ -104,7 +104,7 @@ export function FinalCTA() {
               size="xl"
               className="rounded-full px-10 premium-shadow group text-base"
             >
-              Book Your Appointment
+              Agende Seu Horário
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </Link>
@@ -113,10 +113,10 @@ export function FinalCTA() {
           <div className="flex items-center gap-6 text-sm text-[#737373]">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500" />
-              Appointments Available Today
+              Vagas Disponíveis Hoje
             </span>
             <span className="hidden sm:inline">|</span>
-            <span className="hidden sm:inline">Premium Experience Guaranteed</span>
+            <span className="hidden sm:inline">Experiência Premium Garantida</span>
           </div>
         </div>
       </div>

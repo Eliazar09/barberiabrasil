@@ -7,21 +7,21 @@ import { Card } from "@/components/ui/card"
 
 const testimonials = [
   {
-    quote: "Best haircut I&apos;ve ever had. The attention to detail is unmatched.",
-    author: "Michael R.",
-    role: "Business Executive",
+    quote: "Excelente local, ótimos profissionais, lugar organizado. Voltarei sempre!",
+    author: "Dennys Ramiz",
+    role: "Cliente Verificado",
     rating: 5,
   },
   {
-    quote: "Felt like a VIP experience from start to finish. Pure luxury.",
-    author: "James T.",
-    role: "Entrepreneur",
+    quote: "Ambiente confortável, limpo, ótimo atendimento. Recomendo demais!",
+    author: "Oleg Protasov",
+    role: "Cliente Verificado",
     rating: 5,
   },
   {
-    quote: "I don&apos;t go anywhere else anymore. This is my sanctuary.",
-    author: "David L.",
-    role: "Creative Director",
+    quote: "Atendimento nota mil, detalhamento do corte e barba surreais! Trabalho impecável e muito bem feito, na régua!",
+    author: "Nycolas Monteiro",
+    role: "Local Guide",
     rating: 5,
   },
 ]
@@ -107,10 +107,10 @@ export function TestimonialsSection() {
           className="text-center mb-16"
         >
           <p className="text-[#c9a961] text-sm tracking-[0.3em] uppercase mb-4">
-            Testimonials
+            Avaliações
           </p>
           <h2 className="text-4xl lg:text-5xl font-semibold text-[#fafafa]">
-            Words from the <span className="font-serif italic text-[#c9a961]">Refined</span>
+            O que dizem os <span className="font-serif italic text-[#c9a961]">Clientes</span>
           </h2>
         </motion.div>
 

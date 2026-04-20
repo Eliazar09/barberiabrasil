@@ -10,26 +10,27 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dsbarber.com.br"),
   title: {
-    default: "The Barber Co. Sydney | Premium CBD Barbershop",
-    template: "%s | The Barber Co. Sydney",
+    default: "Dsbarber Shop | Barbearia Premium Boa Vista RR",
+    template: "%s | Dsbarber Shop",
   },
-  description: "Experience Sydney's finest boutique barbering at Barrack Place. Specialising in precision fades, traditional hot towel shaves, and premium men's grooming. Book your ritual today.",
+  description: "A melhor barbearia de Boa Vista! Corte masculino, barba, degradê e muito mais. Nota 4,9 com 135 avaliações. Promo Terça com pagamento à vista. Agende seu horário!",
   keywords: [
-    "barber shop Sydney",
-    "barber Sydney CBD",
-    "best barber Sydney",
-    "men's haircut Sydney",
-    "beard trim Sydney CBD",
-    "skin fade Sydney",
-    "hot towel shave Sydney",
-    "barber Barrack Place",
-    "barber Kent Street",
-    "Sydney barbershop premium"
+    "barbearia boa vista",
+    "barbearia buritis",
+    "corte masculino boa vista",
+    "barba boa vista rr",
+    "degradê boa vista",
+    "barbeiro boa vista",
+    "dsbarber shop",
+    "barbearia premium rr",
+    "corte de cabelo boa vista",
+    "barbearia roraima"
   ],
-  authors: [{ name: "The Barber Co. Sydney" }],
-  creator: "The Barber Co. Sydney",
-  publisher: "The Barber Co. Sydney",
+  authors: [{ name: "Dsbarber Shop" }],
+  creator: "Dsbarber Shop",
+  publisher: "Dsbarber Shop",
   robots: {
     index: true,
     follow: true,
@@ -42,33 +43,33 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://thebarbercosydney.com.au",
+    canonical: "https://dsbarber.com.br",
   },
   openGraph: {
-    title: "The Barber Co. Sydney | Luxury CBD Barbershop",
-    description: "More than a haircut. A statement. Experience premium grooming at Sydney's freshest boutique barber.",
-    url: "https://thebarbercosydney.com.au",
-    siteName: "The Barber Co. Sydney",
+    title: "Dsbarber Shop | Barbearia Premium Boa Vista RR",
+    description: "Mais que um corte. Uma assinatura. Experiência premium de cuidados masculinos na melhor barbearia de Boa Vista.",
+    url: "https://dsbarber.com.br",
+    siteName: "Dsbarber Shop",
     images: [
       {
         url: "/image.png",
         width: 1200,
         height: 630,
-        alt: "The Barber Co. Sydney - Premium Barbershop",
+        alt: "Dsbarber Shop - Barbearia Premium em Boa Vista RR",
       },
     ],
-    locale: "en_AU",
+    locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Barber Co. Sydney | Luxury CBD Barbershop",
-    description: "More than a haircut. A statement. Sydney's finest grooming destination.",
+    title: "Dsbarber Shop | Barbearia Premium Boa Vista RR",
+    description: "Mais que um corte. Uma assinatura. O melhor destino de cuidados masculinos de Boa Vista.",
     images: ["/image.png"],
-    creator: "@thebarbercosydney",
+    creator: "@dsbarber_rr",
   },
   verification: {
-    google: "google-site-verification-code",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
   },
   category: "business",
 }
@@ -76,41 +77,47 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BarberShop",
-  "name": "The Barber Co. Sydney",
-  "image": "https://thebarbercosydney.com.au/image.png",
-  "@id": "https://thebarbercosydney.com.au",
-  "url": "https://thebarbercosydney.com.au",
-  "telephone": "0292901033",
+  "name": "Dsbarber Shop",
+  "image": "https://dsbarber.com.br/image.png",
+  "@id": "https://dsbarber.com.br",
+  "url": "https://dsbarber.com.br",
+  "telephone": "+5595991267894",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Shop 2, 268 Kent Street, Barrack Place",
-    "addressLocality": "Sydney",
-    "addressRegion": "NSW",
-    "postalCode": "2000",
-    "addressCountry": "AU"
+    "streetAddress": "Av. dos Bandeirantes, 1509",
+    "addressLocality": "Boa Vista",
+    "addressRegion": "RR",
+    "postalCode": "69309-185",
+    "addressCountry": "BR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": -33.8675,
-    "longitude": 151.2048
+    "latitude": 2.8235,
+    "longitude": -60.6753
   },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:00",
-      "closes": "20:00"
+      "opens": "09:00",
+      "closes": "19:00"
     },
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": "Saturday",
-      "opens": "08:00",
+      "opens": "09:00",
       "closes": "17:00"
     }
   ],
   "sameAs": [
-    "https://www.instagram.com/thebarbercosydney/"
-  ]
+    "https://www.instagram.com/dsbarber_rr/",
+    "https://www.facebook.com/p/dsbarbershop-100063505786108/"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "135"
+  }
 }
 
 
@@ -120,7 +127,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" dir="ltr">
+    <html lang="pt-BR" dir="ltr">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -133,7 +140,7 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Gentleman's Cut" />
+        <meta name="apple-mobile-web-app-title" content="Dsbarber Shop" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>

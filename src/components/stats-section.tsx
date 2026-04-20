@@ -44,22 +44,22 @@ export function StatsSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold text-[#fafafa] mb-4">
-            Trusted by <span className="font-serif italic text-[#c9a961]">Thousands</span>
+            Confiado por <span className="font-serif italic text-[#c9a961]">Milhares</span>
           </h2>
           <p className="text-[#a3a3a3] max-w-xl mx-auto">
-            Sydney&apos;s premier destination for men&apos;s grooming excellence
+            O destino premium de Boa Vista para cuidados masculinos
           </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           <div className="stat-card">
-            <MovingDotCard target={15000} duration={2500} label="Happy Clients" />
+            <MovingDotCard target={135} duration={2500} label="Clientes Satisfeitos" />
           </div>
           <div className="stat-card">
-            <MovingDotCard target={25} duration={2000} label="Years Experience" />
+            <MovingDotCard target={5} duration={2000} label="Anos de Experiência" />
           </div>
           <div className="stat-card">
-            <MovingDotCard target={50} duration={2000} label="Expert Barbers" />
+            <MovingDotCard target={6} duration={2000} label="Barbeiros Especialistas" />
           </div>
         </div>
       </div>

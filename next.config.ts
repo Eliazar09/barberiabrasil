@@ -1,38 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Performance optimizations
   experimental: {
     optimizePackageImports: ['framer-motion', 'gsap', 'lucide-react'],
+    scrollRestoration: true,
   },
-  // Webpack optimizations
-  webpack: (config, { isServer }) => {
-    // Optimize chunk loading
-    config.optimization.splitChunks = {
-      chunks: 'all',
-      cacheGroups: {
-        default: false,
-        vendors: false,
-        // Vendor chunk for node_modules
-        vendor: {
-          name: 'vendor',
-          chunks: 'all',
-          test: /node_modules/,
-          priority: 20,
-        },
-        // Common chunk for shared code
-        common: {
-          name: 'common',
-          minChunks: 2,
-          chunks: 'all',
-          priority: 10,
-          reuseExistingChunk: true,
-          enforce: true,
-        },
-      },
-    }
-    return config
-  },
+  // Generate ETags for better caching
+  generateEtags: true,
+  // Disable x-powered-by header
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {
@@ -48,7 +24,6 @@ const nextConfig: NextConfig = {
         hostname: "videos.pexels.com",
       },
     ],
-    domains: ["images.unsplash.com", "images.pexels.com"],
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 60,
   },

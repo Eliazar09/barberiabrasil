@@ -42,35 +42,35 @@ const initialForm: FormData = {
   primeiraVez: "nao", termos: false,
 }
 
-const steps = ["Your Details", "Service", "Preferences", "Confirmation"]
+const steps = ["Seus Dados", "Serviço", "Preferências", "Confirmação"]
 
 const servicos = [
-  { id: "haircut-finish", nome: "Haircut & Finish", descricao: "Haircut with scissors & clippers and finished off with styling", duracao: "30 min", preco: "$69" },
-  { id: "wash-haircut", nome: "Wash, Haircut & Style", descricao: "Cleansed, moisturised, cut and styled", duracao: "45 min", preco: "$74" },
-  { id: "long-hair", nome: "Long Hair", descricao: "For hair that is shoulder length or longer. Wash, cut and styled", duracao: "60 min", preco: "$110" },
-  { id: "clipper-cut", nome: "Clipper Cut", descricao: "Using electric clippers to cut your hair instead of using scissors", duracao: "20 min", preco: "$40" },
-  { id: "zero-fade", nome: "Zero Fade", descricao: "Haircut down to the minimal length leaving a slight shadow", duracao: "45 min", preco: "$74" },
-  { id: "skin-fade", nome: "Skin Fade", descricao: "Haircut blends to skin on back and sides", duracao: "45 min", preco: "$74", popular: true },
-  { id: "beard-trim", nome: "Beard Trim", descricao: "Defining and shortening your beard with precision by using clippers, finished with a hot towel", duracao: "20 min", preco: "$41" },
-  { id: "bespoke-beard", nome: "Bespoke Beard Trim", descricao: "For longer beards, using clippers or scissors and razor finish on the cheeks", duracao: "30 min", preco: "$52" },
-  { id: "beard-line-up", nome: "Beard Trim & Line It Up", descricao: "Bringing out the straight razor for an even sharper line-up", duracao: "35 min", preco: "$62" },
-  { id: "hot-towel-head", nome: "Hot Towel Head Shave", descricao: "Using shaving products followed by a hot towel cleanse and moisturiser", duracao: "30 min", preco: "$70" },
-  { id: "traditional-shave", nome: "Traditional Hot Face Shave", descricao: "Ultimate shaving experience using a single razor blade finished with moisturiser", duracao: "30 min", preco: "$70" },
+  { id: "corte-finalizacao", nome: "Corte & Finalização", descricao: "Corte com tesoura e máquina, finalizado com modelagem", duracao: "30 min", preco: "R$ 35" },
+  { id: "lavagem-corte", nome: "Lavagem, Corte & Modelagem", descricao: "Limpeza, hidratação, corte e modelagem", duracao: "45 min", preco: "R$ 45" },
+  { id: "cabelo-longo", nome: "Cabelo Longo", descricao: "Para cabelos no ombro ou abaixo. Lavagem, corte e modelagem", duracao: "60 min", preco: "R$ 55" },
+  { id: "corte-maquina", nome: "Corte na Máquina", descricao: "Corte utilizando máquina elétrica", duracao: "20 min", preco: "R$ 25" },
+  { id: "zero-fade", nome: "Zero Fade", descricao: "Degradê baixo com sombra mínima", duracao: "45 min", preco: "R$ 40" },
+  { id: "degrade", nome: "Degradê (Fade)", descricao: "Degradê na nuca e laterais", duracao: "45 min", preco: "R$ 40", popular: true },
+  { id: "barba", nome: "Barba & Bigode", descricao: "Modelagem da barba com máquina e navalha, finalizado com toalha quente", duracao: "20 min", preco: "R$ 30" },
+  { id: "barba-premium", nome: "Barba Premium", descricao: "Para barbas maiores, com tesoura, navalha e produtos especiais", duracao: "30 min", preco: "R$ 40" },
+  { id: "barba-linha", nome: "Barba com Linha", descricao: "Acabamento perfeito com navalha de barbear", duracao: "35 min", preco: "R$ 45" },
+  { id: "pezinho", nome: "Pezinho", descricao: "Acabamento na nuca e laterais", duracao: "15 min", preco: "R$ 15" },
+  { id: "combo", nome: "Combo Corte + Barba", descricao: "Corte completo + barba com preço especial", duracao: "60 min", preco: "R$ 60" },
 ]
 
-const diasSemana = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+const diasSemana = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
 
 const horarios = [
-  { label: "Morning", sub: "8am - 12pm" },
-  { label: "Afternoon", sub: "12pm - 5pm" },
-  { label: "Evening", sub: "5pm - 8pm" },
+  { label: "Manhã", sub: "9h - 12h" },
+  { label: "Tarde", sub: "12h - 17h" },
+  { label: "Noite", sub: "17h - 19h" },
 ]
 
 const faq = [
-  { q: "What are your opening hours?", a: "Monday-Friday: 8am - 8pm, Saturday: 8am - 5pm, Sunday: Closed" },
-  { q: "Do I need to make a booking?", a: "Walk-ins are welcome but bookings are recommended to secure your preferred time." },
-  { q: "Can I cancel or reschedule?", a: "Yes, please give us at least 24 hours notice for cancellations or rescheduling." },
-  { q: "How should I prepare for my visit?", a: "Come with clean hair and relax. We'll take care of the rest and ensure you have a premium experience." },
+  { q: "Quais são os horários de funcionamento?", a: "Segunda a Sexta: 9h - 19h, Sábado: 9h - 17h, Domingo: Fechado. Promo Terça: pagamento à vista" },
+  { q: "Preciso fazer agendamento?", a: "Aceitamos walk-ins, mas agendamentos são recomendados para garantir seu horário preferido." },
+  { q: "Posso cancelar ou remarcar?", a: "Sim, pedimos pelo menos 24 horas de antecedência para cancelamentos ou remarcações." },
+  { q: "Como devo me preparar para a visita?", a: "Venha com o cabelo limpo e relaxe. Cuidaremos do resto para garantir uma experiência premium." },
 ]
 
 export default function BookingPage() {
@@ -90,7 +90,7 @@ export default function BookingPage() {
     return true
   }
 
-  const PHONE = "0292901033"
+  const PHONE = "95991267894"
 
   const handleSubmit = () => {
     if (!form.termos) return
@@ -98,7 +98,7 @@ export default function BookingPage() {
     const servicoSelecionado = servicos.find(s => s.id === form.servico)
 
     const msg = [
-      "NOVO AGENDAMENTO - THE GENTLEMANS CUT",
+      "NOVO AGENDAMENTO - DSBARBER SHOP",
       "",
       "DADOS DO CLIENTE",
       `Nome: ${form.nome}`,
@@ -106,14 +106,14 @@ export default function BookingPage() {
       `Telefone: ${form.telefone}`,
       form.comoConheceu ? `Como conheceu: ${form.comoConheceu}` : "",
       "",
-      "SOBRE O SERVICO",
-      `Servico: ${servicoSelecionado?.nome}`,
-      form.descricao ? `Descricao: ${form.descricao}` : "",
-      `Primeira vez: ${form.primeiraVez === "sim" ? "Sim" : "Nao"}`,
+      "SERVIÇO",
+      `Serviço: ${servicoSelecionado?.nome}`,
+      form.descricao ? `Descrição: ${form.descricao}` : "",
+      `Primeira vez: ${form.primeiraVez === "sim" ? "Sim" : "Não"}`,
       "",
-      "PREFERENCIAS",
+      "PREFERÊNCIAS",
       `Dia preferido: ${form.diaPreferido}`,
-      `Horario: ${form.horario}`,
+      `Horário: ${form.horario}`,
     ].filter(Boolean).join("%0A")
 
     window.open(`tel:${PHONE}`, "_blank")
@@ -140,14 +140,14 @@ export default function BookingPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/70 via-[#0a0a0a]/50 to-[#0a0a0a]" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
           <div className="flex items-center gap-2 text-[#a3a3a3] text-xs tracking-widest mb-4">
-            <Link href="/" className="hover:text-[#fafafa] transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#fafafa] transition-colors">Início</Link>
             <ChevronRight size={12} />
-            <span className="text-[#fafafa]">Booking</span>
+            <span className="text-[#fafafa]">Agendar</span>
           </div>
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-[#fafafa] tracking-wide">
-            BOOK YOUR <span className="font-serif italic text-[#c9a961]">SESSION</span>
+            AGENDE SEU <span className="font-serif italic text-[#c9a961]">HORÁRIO</span>
           </h1>
-          <p className="text-[#a3a3a3] text-sm mt-2">Take the first step towards your transformation</p>
+          <p className="text-[#a3a3a3] text-sm mt-2">Dê o primeiro passo para sua transformação</p>
         </div>
       </div>
 
@@ -155,9 +155,9 @@ export default function BookingPage() {
         {submitted ? (
           <div className="max-w-lg mx-auto text-center py-20">
             <CheckCircle2 size={64} className="text-[#c9a961] mx-auto mb-6" />
-            <h2 className="text-4xl font-semibold mb-3 tracking-wide text-[#fafafa]">BOOKING REQUEST SENT!</h2>
+            <h2 className="text-4xl font-semibold mb-3 tracking-wide text-[#fafafa]">SOLICITAÇÃO ENVIADA!</h2>
             <p className="text-[#a3a3a3] text-sm leading-relaxed mb-3">
-              Your booking request has been sent. Our team will contact you shortly to confirm your appointment details.
+              Sua solicitação de agendamento foi enviada. Nossa equipe entrará em contato em breve para confirmar seu horário.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
@@ -167,13 +167,13 @@ export default function BookingPage() {
                 className="inline-flex items-center justify-center gap-2 bg-[#c9a961] text-[#0a0a0a] px-8 py-3 rounded-lg font-medium text-sm tracking-wider hover:bg-[#d4b978] transition-colors"
               >
                 <MessageCircle size={16} />
-                CALL US
+                LIGUE PARA NÓS
               </a>
               <Link
                 href="/"
                 className="inline-block border border-[#262626] text-[#fafafa] px-8 py-3 rounded-lg font-medium text-sm tracking-wider hover:bg-[#1a1a1a] transition-colors"
               >
-                BACK TO HOME
+                VOLTAR AO INÍCIO
               </Link>
             </div>
           </div>
@@ -218,48 +218,50 @@ export default function BookingPage() {
                   {/* Step 0 - Dados */}
                   {step === 0 && (
                     <div className="space-y-5">
-                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">YOUR DETAILS</h2>
+                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">SEUS DADOS</h2>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Full Name *</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Nome Completo *</label>
                         <input
                           type="text"
                           value={form.nome}
                           onChange={e => setField("nome", e.target.value)}
-                          placeholder="Your full name"
+                          placeholder="Seu nome completo"
                           className="w-full bg-[#0a0a0a] border border-[#262626] rounded-lg px-4 py-3 text-sm text-[#fafafa] focus:outline-none focus:border-[#c9a961] transition-colors"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Email *</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">E-mail *</label>
                         <input
                           type="email"
                           value={form.email}
                           onChange={e => setField("email", e.target.value)}
-                          placeholder="your@email.com"
+                          placeholder="seu@email.com"
                           className="w-full bg-[#0a0a0a] border border-[#262626] rounded-lg px-4 py-3 text-sm text-[#fafafa] focus:outline-none focus:border-[#c9a961] transition-colors"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Phone *</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Telefone *</label>
                         <input
                           type="tel"
                           value={form.telefone}
                           onChange={e => setField("telefone", e.target.value)}
-                          placeholder="02 9290 1033"
+                          placeholder="(95) 99126-7894"
                           className="w-full bg-[#0a0a0a] border border-[#262626] rounded-lg px-4 py-3 text-sm text-[#fafafa] focus:outline-none focus:border-[#c9a961] transition-colors"
                         />
                       </div>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">How did you hear about us?</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Como nos conheceu?</label>
                         <select
                           value={form.comoConheceu}
                           onChange={e => setField("comoConheceu", e.target.value)}
+                          className="w-full bg-[#0a0a0a] border border-[#262626] rounded-lg px-4 py-3 text-sm text-[#fafafa] focus:outline-none focus:border-[#c9a961] transition-colors"
                         >
-                          <option value="">Select...</option>
+                          <option value="">Selecione...</option>
                           <option>Instagram</option>
                           <option>Google</option>
-                          <option>Friend recommendation</option>
-                          <option>Other</option>
+                          <option>Indicação de amigo</option>
+                          <option>Facebook</option>
+                          <option>Outro</option>
                         </select>
                       </div>
                     </div>
@@ -268,7 +270,7 @@ export default function BookingPage() {
                   {/* Step 1 - Servico */}
                   {step === 1 && (
                     <div className="space-y-5">
-                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">SELECT SERVICE</h2>
+                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">SELECIONE O SERVIÇO</h2>
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {servicos.map((servico) => (
                           <div
@@ -283,6 +285,11 @@ export default function BookingPage() {
                             {servico.popular && (
                               <span className="inline-block px-2 py-0.5 bg-[#c9a961] text-[#0a0a0a] text-[10px] font-bold rounded-full mb-2">
                                 POPULAR
+                              </span>
+                            )}
+                            {servico.id === "combo" && (
+                              <span className="inline-block px-2 py-0.5 bg-[#22c55e] text-[#0a0a0a] text-[10px] font-bold rounded-full mb-2">
+                                PROMO
                               </span>
                             )}
                             <div className="flex items-center gap-2 mb-2">
@@ -300,11 +307,11 @@ export default function BookingPage() {
                         ))}
                       </div>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Notes</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Observações</label>
                         <textarea
                           value={form.descricao}
                           onChange={e => setField("descricao", e.target.value)}
-                          placeholder="Any special requests or preferences?"
+                          placeholder="Algum pedido especial ou preferência?"
                           rows={3}
                           className="w-full bg-[#0a0a0a] border border-[#262626] rounded-lg px-4 py-3 text-sm text-[#fafafa] focus:outline-none focus:border-[#c9a961] transition-colors resize-none"
                         />
@@ -315,9 +322,9 @@ export default function BookingPage() {
                   {/* Step 2 - Preferencias */}
                   {step === 2 && (
                     <div className="space-y-5">
-                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">PREFERENCES</h2>
+                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">PREFERÊNCIAS</h2>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Preferred Day *</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Dia Preferido *</label>
                         <div className="flex flex-wrap gap-2">
                           {diasSemana.map(dia => (
                             <button
@@ -335,7 +342,7 @@ export default function BookingPage() {
                         </div>
                       </div>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Preferred Time *</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Horário Preferido *</label>
                         <div className="grid grid-cols-3 gap-3">
                           {horarios.map(h => (
                             <button
@@ -358,7 +365,7 @@ export default function BookingPage() {
                         </div>
                       </div>
                       <div>
-                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">First visit?</label>
+                        <label className="block text-xs tracking-widest text-[#737373] uppercase mb-2">Primeira visita?</label>
                         <div className="flex gap-3">
                           {["sim", "nao"].map(v => (
                             <button
@@ -368,7 +375,7 @@ export default function BookingPage() {
                                 form.primeiraVez === v ? "bg-[#c9a961] text-[#0a0a0a] border-[#c9a961]" : "border-[#262626] text-[#a3a3a3] hover:border-[#c9a961]/30"
                               }`}
                             >
-                              {v === "sim" ? "Yes" : "No"}
+                              {v === "sim" ? "Sim" : "Não"}
                             </button>
                           ))}
                         </div>
@@ -379,15 +386,15 @@ export default function BookingPage() {
                   {/* Step 3 - Confirmacao */}
                   {step === 3 && (
                     <div>
-                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">CONFIRMATION</h2>
+                      <h2 className="text-2xl font-semibold tracking-wider mb-6 text-[#fafafa]">CONFIRMAÇÃO</h2>
                       <div className="space-y-3 mb-8">
                         {[
-                          { label: "Name", value: form.nome },
-                          { label: "Email", value: form.email },
-                          { label: "Phone", value: form.telefone },
-                          { label: "Service", value: servicos.find(s => s.id === form.servico)?.nome },
-                          { label: "Day", value: form.diaPreferido },
-                          { label: "Time", value: form.horario },
+                          { label: "Nome", value: form.nome },
+                          { label: "E-mail", value: form.email },
+                          { label: "Telefone", value: form.telefone },
+                          { label: "Serviço", value: servicos.find(s => s.id === form.servico)?.nome },
+                          { label: "Dia", value: form.diaPreferido },
+                          { label: "Horário", value: form.horario },
                         ].map(item => (
                           <div key={item.label} className="flex justify-between py-2.5 border-b border-[#262626]">
                             <span className="text-xs tracking-widest text-[#737373] uppercase">{item.label}</span>
@@ -403,7 +410,7 @@ export default function BookingPage() {
                           className="mt-0.5 accent-[#c9a961] w-4 h-4 shrink-0"
                         />
                         <span className="text-sm text-[#a3a3a3] leading-relaxed">
-                          I agree to the <a href="#" className="text-[#c9a961] underline">Terms of Service</a> and <a href="#" className="text-[#c9a961] underline">Privacy Policy</a>.
+                          Concordo com os <a href="#" className="text-[#c9a961] underline">Termos de Serviço</a> e <a href="#" className="text-[#c9a961] underline">Política de Privacidade</a>.
                         </span>
                       </label>
                     </div>
@@ -417,7 +424,7 @@ export default function BookingPage() {
                         className="flex items-center gap-2 text-sm font-medium text-[#737373] hover:text-[#fafafa] transition-colors"
                       >
                         <ArrowLeft size={16} />
-                        Back
+                        Voltar
                       </button>
                     )}
                     {step < 3 ? (
@@ -426,7 +433,7 @@ export default function BookingPage() {
                         disabled={!canNext()}
                         className="bg-[#c9a961] text-[#0a0a0a] px-8 py-3 rounded-lg font-medium text-sm tracking-wider hover:bg-[#d4b978] transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2"
                       >
-                        Continue
+                        Continuar
                         <ArrowRight size={16} />
                       </button>
                     ) : (
@@ -436,7 +443,7 @@ export default function BookingPage() {
                         className="bg-[#c9a961] text-[#0a0a0a] px-8 py-3 rounded-lg font-medium text-sm tracking-wider hover:bg-[#d4b978] transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-2"
                       >
                         <MessageCircle size={16} />
-                        CALL TO BOOK
+                        LIGAR PARA AGENDAR
                       </button>
                     )}
                   </div>
@@ -451,15 +458,15 @@ export default function BookingPage() {
                 <div className="flex items-start gap-3">
                   <Clock size={18} className="text-[#c9a961] mt-0.5 shrink-0" />
                   <div>
-                    <p className="text-sm font-semibold text-[#fafafa] mb-1">Response Time</p>
-                    <p className="text-xs text-[#737373] leading-relaxed">We respond within 24 business hours.</p>
+                    <p className="text-sm font-semibold text-[#fafafa] mb-1">Tempo de Resposta</p>
+                    <p className="text-xs text-[#737373] leading-relaxed">Respondemos em até 24 horas úteis.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <AlertTriangle size={18} className="text-[#c9a961] mt-0.5 shrink-0" />
                   <div>
-                    <p className="text-sm font-semibold text-[#fafafa] mb-1">Cancellation Policy</p>
-                    <p className="text-xs text-[#737373] leading-relaxed">Please give 24 hours notice for cancellations.</p>
+                    <p className="text-sm font-semibold text-[#fafafa] mb-1">Política de Cancelamento</p>
+                    <p className="text-xs text-[#737373] leading-relaxed">Pedimos 24 horas de antecedência para cancelamentos.</p>
                   </div>
                 </div>
               </div>
@@ -468,7 +475,7 @@ export default function BookingPage() {
               <div className="bg-[#141414] border border-[#262626] rounded-2xl p-6">
                 <div className="flex items-center gap-2 mb-5">
                   <HelpCircle size={18} className="text-[#c9a961]" />
-                  <h3 className="text-lg font-semibold tracking-widest text-[#fafafa]">FAQ</h3>
+                  <h3 className="text-lg font-semibold tracking-widest text-[#fafafa]">Dúvidas</h3>
                 </div>
                 <div className="space-y-3">
                   {faq.map((item, i) => (
@@ -490,8 +497,8 @@ export default function BookingPage() {
 
               {/* PHONE CTA */}
               <div className="bg-[#c9a961] rounded-2xl p-6 text-center">
-                <p className="text-xl font-semibold tracking-wider mb-2 text-[#0a0a0a]">CALL US</p>
-                <p className="text-xs text-[#0a0a0a]/70 mb-4">Prefer to call directly?</p>
+                <p className="text-xl font-semibold tracking-wider mb-2 text-[#0a0a0a]">LIGUE PARA NÓS</p>
+                <p className="text-xs text-[#0a0a0a]/70 mb-4">Prefere ligar diretamente?</p>
                 <a
                   href={`tel:${PHONE}`}
                   target="_blank"
@@ -499,7 +506,7 @@ export default function BookingPage() {
                   className="flex items-center justify-center gap-2 bg-[#0a0a0a] text-[#c9a961] px-6 py-2.5 rounded-lg font-medium text-sm tracking-wider hover:bg-[#1a1a1a] transition-colors"
                 >
                   <MessageCircle size={15} />
-                  Call Now
+                  Ligar Agora
                 </a>
               </div>
             </div>

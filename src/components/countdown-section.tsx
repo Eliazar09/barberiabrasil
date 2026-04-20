@@ -59,10 +59,10 @@ export function CountdownSection() {
             </div>
             <div>
               <h3 className="text-xl font-semibold text-[#fafafa]">
-                Limited Appointments Available
+                Vagas Limitadas Disponíveis
               </h3>
               <p className="text-[#a3a3a3]">
-                Only {timeLeft.hours} hours left to secure your spot today
+                Apenas {timeLeft.hours} horas restantes para garantir seu horário hoje
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export function CountdownSection() {
                     {formatNumber(timeLeft.hours)}
                   </span>
                 </div>
-                <span className="text-xs text-[#a3a3a3] mt-1 block">Hours</span>
+                <span className="text-xs text-[#a3a3a3] mt-1 block">Horas</span>
               </div>
 
               {/* Separator */}
@@ -94,7 +94,7 @@ export function CountdownSection() {
                     {formatNumber(timeLeft.minutes)}
                   </span>
                 </div>
-                <span className="text-xs text-[#a3a3a3] mt-1 block">Minutes</span>
+                <span className="text-xs text-[#a3a3a3] mt-1 block">Minutos</span>
               </div>
 
               {/* Separator */}
@@ -109,7 +109,7 @@ export function CountdownSection() {
                     {formatNumber(timeLeft.seconds)}
                   </span>
                 </div>
-                <span className="text-xs text-[#a3a3a3] mt-1 block">Seconds</span>
+                <span className="text-xs text-[#a3a3a3] mt-1 block">Segundos</span>
               </div>
             </div>
           </div>
